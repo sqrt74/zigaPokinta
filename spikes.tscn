@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv051pt560kt5"]
+
+[ext_resource type="Script" path="res://spikes.gd" id="1_4qafb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xty4"]
+size = Vector2(184, 24.75)
+
+[node name="Spikes" type="Node2D"]
+script = ExtResource("1_4qafb")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.72549, 0.745098, 0.780392, 1)
+polygon = PackedVector2Array(-100, 22.5, -100, 22.5, -83.3333, -22.5, -66.6667, 22.5, -66.6667, 22.5, -50, -22.5, -33.3333, 22.5, -33.3333, 22.5, -16.6667, -22.5, 7.10543e-15, 22.5, 0, 22.5, 16.6667, -22.5, 33.3333, 22.5, 33.3333, 22.5, 50, -22.5, 66.6667, 22.5, 66.6667, 22.5, 83.3333, -22.5, 100, 22.5, 100, 22.5)
+
+[node name="DangerArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DangerArea"]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_7xty4")

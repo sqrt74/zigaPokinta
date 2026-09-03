@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://bd4xofphowhnu"]
+
+[ext_resource type="PackedScene" uid="uid://dg0rghrku1702" path="res://platform.tscn" id="1_f5x84"]
+[ext_resource type="PackedScene" uid="uid://cookwqtg0jimn" path="res://spikes1.tscn" id="2_432n0"]
+[ext_resource type="PackedScene" uid="uid://c2dnh37lbplc7" path="res://player.tscn" id="3_432n0"]
+[ext_resource type="PackedScene" uid="uid://bto5uhu1jy2nx" path="res://moving_platform.tscn" id="4_jiouf"]
+[ext_resource type="PackedScene" uid="uid://5hbnljcgr17f" path="res://shrinking_platform.tscn" id="5_pixff"]
+[ext_resource type="PackedScene" uid="uid://cxp0ekya43404" path="res://goal.tscn" id="6_6m74g"]
+[ext_resource type="PackedScene" uid="uid://cvluxvb0qn24v" path="res://damage_zone.tscn" id="7_pixff"]
+
+[node name="Level2" type="Node2D" unique_id=1542347111]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1269162366]
+offset_left = 2.0
+offset_top = -7.0
+offset_right = 1164.0
+offset_bottom = 660.0
+color = Color(0, 0, 1, 1)
+
+[node name="Platform" parent="." unique_id=410251259 instance=ExtResource("1_f5x84")]
+position = Vector2(577, 653)
+platform_width = 1220.0
+
+[node name="Platform2" parent="." unique_id=1535873660 instance=ExtResource("1_f5x84")]
+position = Vector2(-17, 320)
+rotation = 1.5707964
+platform_width = 700.0
+
+[node name="Platform2" parent="Platform2" unique_id=727070462 instance=ExtResource("1_f5x84")]
+position = Vector2(-1.0000668, -1189)
+rotation = 6.2831855
+platform_width = 700.0
+
+[node name="Spikes" parent="." unique_id=1768880579 instance=ExtResource("2_432n0")]
+position = Vector2(655, 614)
+spikes_width = 1000.0
+spike_count = 20
+
+[node name="Platform3" parent="." unique_id=1890929260 instance=ExtResource("1_f5x84")]
+position = Vector2(70, 562)
+platform_width = 200.0
+
+[node name="player" parent="." unique_id=967744719 instance=ExtResource("3_432n0")]
+position = Vector2(54, 450)
+
+[node name="Spikes2" parent="." unique_id=1782464188 instance=ExtResource("2_432n0")]
+position = Vector2(274, 523)
+
+[node name="Spikes3" parent="." unique_id=417435620 instance=ExtResource("2_432n0")]
+position = Vector2(577, 519)
+
+[node name="Spikes4" parent="." unique_id=168497068 instance=ExtResource("2_432n0")]
+position = Vector2(879, 517)
+
+[node name="Platform4" parent="." unique_id=1280775984 instance=ExtResource("1_f5x84")]
+position = Vector2(1135, 459)
+platform_width = 100.0
+
+[node name="MovingPlatform" parent="." unique_id=1520978119 instance=ExtResource("4_jiouf")]
+position = Vector2(258, 566)
+platform_width = 150.0
+movement_offset = Vector2(800, 0)
+travel_time = 6.0
+
+[node name="ShrinkingPlatform" parent="." unique_id=722588808 instance=ExtResource("5_pixff")]
+position = Vector2(1021, 358)
+platform_width = 100.0
+shrink_speed = 500.0
+
+[node name="ShrinkingPlatform2" parent="." unique_id=1684396559 instance=ExtResource("5_pixff")]
+position = Vector2(1112, 250)
+platform_width = 100.0
+shrink_speed = 500.0
+
+[node name="ShrinkingPlatform3" parent="." unique_id=320099668 instance=ExtResource("5_pixff")]
+position = Vector2(973, 154)
+platform_width = 20.0
+shrink_speed = 500.0
+
+[node name="Goal" parent="." unique_id=562118430 instance=ExtResource("6_6m74g")]
+position = Vector2(759, 91)
+
+[node name="DamageZone" parent="." unique_id=638003928 instance=ExtResource("7_pixff")]
+position = Vector2(1130, 442)
+
+[node name="Platform5" parent="." unique_id=822470162 instance=ExtResource("1_f5x84")]
+position = Vector2(1224, 67)

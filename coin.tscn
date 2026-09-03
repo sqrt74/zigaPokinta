@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cfgdgch51oww7"]
+
+[ext_resource type="Script" uid="uid://bb4d7qujrf8db" path="res://coin.gd" id="1_d5gmh"]
+
+[node name="Coin" type="Area2D" unique_id=695698035]
+script = ExtResource("1_d5gmh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=529956470]

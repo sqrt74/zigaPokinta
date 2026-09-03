@@ -1,0 +1,22 @@
+# Godot 4 samodejno ustvarjene datoteke
+.godot/
+
+# Starejši Godotovi začasni podatki
+.import/
+
+# Začasne in varnostne datoteke
+*.tmp
+*~
+*.bak
+
+# Operacijski sistemi
+.DS_Store
+Thumbs.db
+
+# Izvozne poverilnice
+export_credentials.cfg
+
+# Izdelane različice igre
+build/
+builds/
+export

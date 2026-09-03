@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cs4obh6nji3cy"]
+
+[ext_resource type="PackedScene" uid="uid://dg0rghrku1702" path="res://platform.tscn" id="1_xehqc"]
+
+[node name="background" type="ColorRect" unique_id=777908317]
+offset_left = -51.0
+offset_top = 14.0
+offset_right = 1108.0
+offset_bottom = 662.0
+mouse_filter = 2
+color = Color(0, 0.192157, 0.537255, 1)
+
+[node name="Platform" parent="." unique_id=490563157 instance=ExtResource("1_xehqc")]
+position = Vector2(586, 635)
+platform_width = 1200.0
+
+[node name="Platform2" parent="." unique_id=882830635 instance=ExtResource("1_xehqc")]
+position = Vector2(0, 325)
+rotation = 1.5707964
+platform_width = 700.0
+
+[node name="Platform2" parent="Platform2" unique_id=250777624 instance=ExtResource("1_xehqc")]
+position = Vector2(-13.000065, -1173)
+platform_width = 700.0

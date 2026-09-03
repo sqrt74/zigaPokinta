@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dbp3dmehudhiv"]
+
+[ext_resource type="Script" uid="uid://dqiemljryxdxj" path="res://monster.gd" id="1_nx4s4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3gyj"]
+size = Vector2(55, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrqeg"]
+size = Vector2(49.5, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ga5te"]
+size = Vector2(63, 36)
+
+[node name="Monster" type="CharacterBody2D" unique_id=744485652]
+script = ExtResource("1_nx4s4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=965869078]
+shape = SubResource("RectangleShape2D_s3gyj")
+
+[node name="StompArea" type="Area2D" parent="." unique_id=44998153]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StompArea" unique_id=473035795]
+position = Vector2(0, -35)
+shape = SubResource("RectangleShape2D_mrqeg")
+
+[node name="DangerArea" type="Area2D" parent="." unique_id=800656840]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DangerArea" unique_id=1178217666]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_ga5te")
+
+[node name="GroundCheck" type="RayCast2D" parent="." unique_id=628921354]

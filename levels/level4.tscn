@@ -1,0 +1,588 @@
+[gd_scene format=3 uid="uid://c82ilk15kv6ij"]
+
+[ext_resource type="PackedScene" uid="uid://cookwqtg0jimn" path="res://spikes1.tscn" id="1_1jw75"]
+[ext_resource type="PackedScene" uid="uid://c2dnh37lbplc7" path="res://player.tscn" id="2_8s3b3"]
+[ext_resource type="PackedScene" uid="uid://dg0rghrku1702" path="res://platform.tscn" id="3_cc5tm"]
+[ext_resource type="PackedScene" uid="uid://dbp3dmehudhiv" path="res://monster.tscn" id="4_mj76i"]
+[ext_resource type="PackedScene" uid="uid://5hbnljcgr17f" path="res://shrinking_platform.tscn" id="5_8s3b3"]
+[ext_resource type="PackedScene" uid="uid://cv051pt560kt5" path="res://spikes.tscn" id="6_cc5tm"]
+[ext_resource type="PackedScene" uid="uid://bto5uhu1jy2nx" path="res://moving_platform.tscn" id="7_cc5tm"]
+[ext_resource type="PackedScene" uid="uid://cvluxvb0qn24v" path="res://damage_zone.tscn" id="8_mj76i"]
+[ext_resource type="PackedScene" uid="uid://cxp0ekya43404" path="res://goal.tscn" id="9_mdw0g"]
+[ext_resource type="PackedScene" uid="uid://cfgdgch51oww7" path="res://coin.tscn" id="10_naavy"]
+[ext_resource type="PackedScene" uid="uid://cv0swh4dxw41o" path="res://hud.tscn" id="11_gh4cy"]
+
+[node name="background" type="ColorRect" unique_id=106548344]
+offset_left = 8.0
+offset_top = -9.0
+offset_right = 3008.0
+offset_bottom = 1991.0
+mouse_filter = 2
+color = Color(0, 0.192157, 0.537255, 1)
+
+[node name="Spikes" parent="." unique_id=1185685120 instance=ExtResource("1_1jw75")]
+position = Vector2(650, 620)
+spikes_width = 1000.0
+spike_count = 25
+
+[node name="player" parent="." unique_id=1901151934 instance=ExtResource("2_8s3b3")]
+position = Vector2(50, 358)
+
+[node name="Platform" parent="." unique_id=185352003 instance=ExtResource("3_cc5tm")]
+position = Vector2(75, 578)
+script = null
+
+[node name="Monster" parent="." unique_id=744485652 instance=ExtResource("4_mj76i")]
+position = Vector2(276, 605)
+
+[node name="Monster5" parent="." unique_id=474418265 instance=ExtResource("4_mj76i")]
+position = Vector2(626, 605)
+
+[node name="Platform2" parent="." unique_id=2091782762 instance=ExtResource("3_cc5tm")]
+position = Vector2(653, 656)
+script = null
+
+[node name="Monster2" parent="." unique_id=493388935 instance=ExtResource("4_mj76i")]
+position = Vector2(862, 607)
+
+[node name="ShrinkingPlatform" parent="." unique_id=285954268 instance=ExtResource("5_8s3b3")]
+position = Vector2(1280, 615)
+platform_width = 231.0
+shrink_speed = 200.0
+
+[node name="Spikes2" parent="." unique_id=1613752736 instance=ExtResource("6_cc5tm")]
+position = Vector2(1295, 662)
+spikes_width = 250.0
+
+[node name="Platform3" parent="." unique_id=1849812396 instance=ExtResource("3_cc5tm")]
+position = Vector2(1438, 613)
+rotation = 1.5707964
+script = null
+
+[node name="Platform4" parent="." unique_id=1411326196 instance=ExtResource("3_cc5tm")]
+position = Vector2(1958, 676)
+script = null
+
+[node name="ShrinkingPlatform2" parent="." unique_id=4869647 instance=ExtResource("5_8s3b3")]
+position = Vector2(2124, 493)
+shrink_speed = 200.0
+
+[node name="Platform5" parent="." unique_id=1938192936 instance=ExtResource("3_cc5tm")]
+position = Vector2(1968, 444)
+rotation = 1.5707964
+script = null
+
+[node name="ShrinkingPlatform3" parent="." unique_id=78840175 instance=ExtResource("5_8s3b3")]
+position = Vector2(1325, 340)
+platform_width = 1000.0
+shrink_speed = 500.0
+
+[node name="Platform6" parent="." unique_id=1449578237 instance=ExtResource("3_cc5tm")]
+position = Vector2(780, 257)
+script = null
+
+[node name="Platform7" parent="." unique_id=257804621 instance=ExtResource("3_cc5tm")]
+position = Vector2(2477, 417)
+rotation = 1.5707964
+script = null
+
+[node name="ShrinkingPlatform4" parent="." unique_id=1091438820 instance=ExtResource("5_8s3b3")]
+position = Vector2(448, 314)
+shrink_speed = 200.0
+
+[node name="Platform8" parent="." unique_id=1558353582 instance=ExtResource("3_cc5tm")]
+position = Vector2(122, 273)
+script = null
+
+[node name="Monster3" parent="." unique_id=535185289 instance=ExtResource("4_mj76i")]
+position = Vector2(464, 214)
+
+[node name="ShrinkingPlatform5" parent="." unique_id=44394268 instance=ExtResource("5_8s3b3")]
+position = Vector2(55, 172)
+platform_width = 100.0
+
+[node name="Platform10" parent="." unique_id=472584582 instance=ExtResource("3_cc5tm")]
+position = Vector2(1040, 112)
+script = null
+
+[node name="Platform11" parent="." unique_id=913174674 instance=ExtResource("3_cc5tm")]
+position = Vector2(2272, -14)
+script = null
+
+[node name="MovingPlatform" parent="." unique_id=741790655 instance=ExtResource("7_cc5tm")]
+position = Vector2(1940, 112)
+platform_width = 35.0
+
+[node name="MovingPlatform2" parent="." unique_id=124200538 instance=ExtResource("7_cc5tm")]
+position = Vector2(2440, 113)
+platform_width = 40.0
+movement_offset = Vector2(-150, 0)
+
+[node name="Spikes3" parent="." unique_id=917764188 instance=ExtResource("6_cc5tm")]
+position = Vector2(494, 2)
+spikes_width = 1000.0
+spikes_height = 10.0
+
+[node name="Spikes4" parent="." unique_id=1915866702 instance=ExtResource("6_cc5tm")]
+position = Vector2(1494, 4)
+spikes_width = 1000.0
+spikes_height = 10.0
+
+[node name="Spikes5" parent="." unique_id=291636502 instance=ExtResource("6_cc5tm")]
+position = Vector2(2600, 687)
+
+[node name="Spikes6" parent="." unique_id=1822461232 instance=ExtResource("6_cc5tm")]
+position = Vector2(2905, 687)
+
+[node name="ShrinkingPlatform6" parent="." unique_id=1281062032 instance=ExtResource("5_8s3b3")]
+position = Vector2(2741, 822)
+platform_width = 50.0
+shrink_speed = 500.0
+
+[node name="Spikes7" parent="." unique_id=518421100 instance=ExtResource("1_1jw75")]
+position = Vector2(2735, 891)
+
+[node name="Platform9" parent="." unique_id=48556077 instance=ExtResource("3_cc5tm")]
+position = Vector2(2864, 844)
+rotation = 1.5707964
+script = null
+
+[node name="Platform12" parent="." unique_id=1489542667 instance=ExtResource("3_cc5tm")]
+position = Vector2(2509, 916)
+script = null
+
+[node name="Platform13" parent="." unique_id=1241203477 instance=ExtResource("3_cc5tm")]
+position = Vector2(1901, 893)
+rotation = 1.5707964
+script = null
+
+[node name="ShrinkingPlatform7" parent="." unique_id=149786181 instance=ExtResource("5_8s3b3")]
+position = Vector2(2142, 919)
+platform_width = 400.0
+shrink_speed = 200.0
+
+[node name="MovingPlatform3" parent="." unique_id=1312742059 instance=ExtResource("7_cc5tm")]
+position = Vector2(2019, 1076)
+platform_width = 50.0
+movement_offset = Vector2(500, 0)
+
+[node name="Spikes8" parent="." unique_id=448295415 instance=ExtResource("1_1jw75")]
+position = Vector2(2421, 1143)
+spikes_width = 1000.0
+spike_count = 15
+
+[node name="MovingPlatform4" parent="." unique_id=1917323408 instance=ExtResource("7_cc5tm")]
+position = Vector2(2891, 1057)
+platform_width = 25.0
+platform_height = 50.0
+movement_offset = Vector2(-400, 0)
+
+[node name="Platform14" parent="." unique_id=1718755271 instance=ExtResource("3_cc5tm")]
+position = Vector2(-16, 277)
+rotation = 1.5707964
+script = null
+
+[node name="Platform15" parent="." unique_id=110143219 instance=ExtResource("3_cc5tm")]
+position = Vector2(2787, -16)
+script = null
+
+[node name="Platform16" parent="." unique_id=920196246 instance=ExtResource("3_cc5tm")]
+position = Vector2(3025, 995)
+rotation = 1.5707964
+script = null
+
+[node name="ShrinkingPlatform8" parent="." unique_id=75736649 instance=ExtResource("5_8s3b3")]
+position = Vector2(2879, 1404)
+shrink_speed = 500.0
+
+[node name="ShrinkingPlatform9" parent="." unique_id=228089293 instance=ExtResource("5_8s3b3")]
+position = Vector2(2540, 1413)
+shrink_speed = 500.0
+
+[node name="ShrinkingPlatform10" parent="." unique_id=582582648 instance=ExtResource("5_8s3b3")]
+position = Vector2(2181, 1408)
+shrink_speed = 500.0
+
+[node name="ShrinkingPlatform11" parent="." unique_id=823096325 instance=ExtResource("5_8s3b3")]
+position = Vector2(1830, 1308)
+shrink_speed = 500.0
+
+[node name="Platform17" parent="." unique_id=1507855018 instance=ExtResource("3_cc5tm")]
+position = Vector2(1542, 1162)
+script = null
+
+[node name="Spikes9" parent="." unique_id=625040152 instance=ExtResource("1_1jw75")]
+position = Vector2(2511, 1597)
+spikes_width = 1000.0
+spike_count = 20
+
+[node name="Spikes10" parent="." unique_id=37906327 instance=ExtResource("1_1jw75")]
+position = Vector2(1751, 1596)
+spikes_width = 500.0
+spike_count = 10
+
+[node name="Platform18" parent="." unique_id=508046556 instance=ExtResource("3_cc5tm")]
+position = Vector2(1467, 1342)
+rotation = 1.5707964
+script = null
+
+[node name="DamageZone" parent="." unique_id=638003928 instance=ExtResource("8_mj76i")]
+position = Vector2(2131, 577)
+
+[node name="DamageZone2" parent="." unique_id=496338666 instance=ExtResource("8_mj76i")]
+position = Vector2(2123, 385)
+
+[node name="MovingPlatform5" parent="." unique_id=1142720491 instance=ExtResource("7_cc5tm")]
+position = Vector2(1379, 1057)
+rotation = 1.5707964
+movement_offset = Vector2(-550, 0)
+
+[node name="MovingPlatform6" parent="." unique_id=835154752 instance=ExtResource("7_cc5tm")]
+position = Vector2(1258, 1179)
+movement_offset = Vector2(-550, 0)
+
+[node name="MovingPlatform7" parent="." unique_id=1642057493 instance=ExtResource("7_cc5tm")]
+position = Vector2(1153, 1066)
+rotation = 1.5707964
+movement_offset = Vector2(-550, 0)
+
+[node name="Spikes11" parent="." unique_id=1300615469 instance=ExtResource("6_cc5tm")]
+position = Vector2(815, 1179)
+
+[node name="Spikes12" parent="." unique_id=1063124601 instance=ExtResource("6_cc5tm")]
+position = Vector2(564, 1049)
+
+[node name="Spikes13" parent="." unique_id=1608214136 instance=ExtResource("1_1jw75")]
+position = Vector2(849, 936)
+
+[node name="Platform19" parent="." unique_id=1627226179 instance=ExtResource("3_cc5tm")]
+position = Vector2(982, 895)
+script = null
+
+[node name="Platform20" parent="." unique_id=2068273818 instance=ExtResource("3_cc5tm")]
+position = Vector2(878, 787)
+rotation = 1.5707964
+script = null
+
+[node name="Platform21" parent="." unique_id=1513150127 instance=ExtResource("3_cc5tm")]
+position = Vector2(615, 895)
+script = null
+
+[node name="Spikes14" parent="." unique_id=342704076 instance=ExtResource("6_cc5tm")]
+position = Vector2(1033, 1041)
+
+[node name="MovingPlatform8" parent="." unique_id=1925918511 instance=ExtResource("7_cc5tm")]
+position = Vector2(1204, 1058)
+platform_width = 100.0
+movement_offset = Vector2(-550, 0)
+
+[node name="Spikes15" parent="." unique_id=97684985 instance=ExtResource("1_1jw75")]
+position = Vector2(974, 1266)
+spikes_width = 1000.0
+spike_count = 20
+
+[node name="Platform22" parent="." unique_id=1821381775 instance=ExtResource("3_cc5tm")]
+position = Vector2(468, 1108)
+rotation = 1.5707964
+script = null
+
+[node name="Spikes16" parent="." unique_id=431168618 instance=ExtResource("1_1jw75")]
+position = Vector2(349, 892)
+
+[node name="Spikes17" parent="." unique_id=1301142105 instance=ExtResource("1_1jw75")]
+position = Vector2(94, 890)
+
+[node name="MovingPlatform9" parent="." unique_id=862135097 instance=ExtResource("7_cc5tm")]
+position = Vector2(125, 939)
+platform_width = 150.0
+
+[node name="ShrinkingPlatform12" parent="." unique_id=1012456397 instance=ExtResource("5_8s3b3")]
+position = Vector2(127, 1096)
+shrink_speed = 500.0
+
+[node name="ShrinkingPlatform13" parent="." unique_id=1361415234 instance=ExtResource("5_8s3b3")]
+position = Vector2(325, 1275)
+shrink_speed = 500.0
+
+[node name="Spikes18" parent="." unique_id=1665388949 instance=ExtResource("1_1jw75")]
+position = Vector2(125, 1141)
+spikes_width = 250.0
+
+[node name="Spikes19" parent="." unique_id=607883621 instance=ExtResource("1_1jw75")]
+position = Vector2(323, 1322)
+spikes_width = 250.0
+
+[node name="Platform23" parent="." unique_id=817193368 instance=ExtResource("3_cc5tm")]
+position = Vector2(-19, 1312)
+rotation = 1.5707964
+script = null
+
+[node name="Platform24" parent="." unique_id=1399044127 instance=ExtResource("3_cc5tm")]
+position = Vector2(584, 1604)
+script = null
+
+[node name="Monster4" parent="." unique_id=2040465118 instance=ExtResource("4_mj76i")]
+position = Vector2(621, 1510)
+
+[node name="Monster6" parent="." unique_id=100136379 instance=ExtResource("4_mj76i")]
+position = Vector2(628, 1355)
+
+[node name="Monster7" parent="." unique_id=1238765913 instance=ExtResource("4_mj76i")]
+position = Vector2(901, 1489)
+
+[node name="Monster8" parent="." unique_id=878657890 instance=ExtResource("4_mj76i")]
+position = Vector2(908, 1348)
+
+[node name="Monster9" parent="." unique_id=219704933 instance=ExtResource("4_mj76i")]
+position = Vector2(1094, 1479)
+
+[node name="Monster10" parent="." unique_id=1251570881 instance=ExtResource("4_mj76i")]
+position = Vector2(704, 1355)
+
+[node name="Monster11" parent="." unique_id=2054593427 instance=ExtResource("4_mj76i")]
+position = Vector2(514, 1410)
+
+[node name="Monster12" parent="." unique_id=1417535130 instance=ExtResource("4_mj76i")]
+position = Vector2(663, 1482)
+
+[node name="Monster13" parent="." unique_id=806644798 instance=ExtResource("4_mj76i")]
+position = Vector2(404, 1503)
+
+[node name="Monster14" parent="." unique_id=492211623 instance=ExtResource("4_mj76i")]
+position = Vector2(1008, 1362)
+
+[node name="DamageZone3" parent="." unique_id=1069321794 instance=ExtResource("8_mj76i")]
+position = Vector2(632, 1517)
+
+[node name="DamageZone4" parent="." unique_id=565553293 instance=ExtResource("8_mj76i")]
+position = Vector2(887, 1524)
+
+[node name="DamageZone5" parent="." unique_id=564255750 instance=ExtResource("8_mj76i")]
+position = Vector2(394, 1510)
+
+[node name="DamageZone6" parent="." unique_id=2056212607 instance=ExtResource("8_mj76i")]
+position = Vector2(1132, 1520)
+
+[node name="Platform25" parent="." unique_id=1080662791 instance=ExtResource("3_cc5tm")]
+position = Vector2(1465, 1660)
+rotation = 1.5707964
+script = null
+
+[node name="Platform26" parent="." unique_id=1289458554 instance=ExtResource("3_cc5tm")]
+position = Vector2(868, 1764)
+script = null
+
+[node name="Spikes20" parent="." unique_id=2126016592 instance=ExtResource("1_1jw75")]
+position = Vector2(1348, 1723)
+
+[node name="Platform27" parent="." unique_id=825454921 instance=ExtResource("3_cc5tm")]
+position = Vector2(987, 2024)
+script = null
+
+[node name="Spikes21" parent="." unique_id=200964958 instance=ExtResource("6_cc5tm")]
+position = Vector2(100, 1993)
+spikes_height = 30.0
+
+[node name="Platform28" parent="." unique_id=200969101 instance=ExtResource("3_cc5tm")]
+position = Vector2(221, 1958)
+script = null
+
+[node name="Monster15" parent="." unique_id=1412612442 instance=ExtResource("4_mj76i")]
+position = Vector2(49, 1914)
+
+[node name="Monster16" parent="." unique_id=1347213111 instance=ExtResource("4_mj76i")]
+position = Vector2(128, 1916)
+
+[node name="Spikes22" parent="." unique_id=1893096452 instance=ExtResource("1_1jw75")]
+position = Vector2(343, 1990)
+spikes_height = 30.0
+
+[node name="Platform29" parent="." unique_id=1602955529 instance=ExtResource("3_cc5tm")]
+position = Vector2(463, 1952)
+script = null
+
+[node name="Spikes23" parent="." unique_id=802903954 instance=ExtResource("1_1jw75")]
+position = Vector2(582, 1993)
+spikes_height = 30.0
+
+[node name="Platform30" parent="." unique_id=1183885005 instance=ExtResource("3_cc5tm")]
+position = Vector2(711, 1970)
+script = null
+
+[node name="Spikes24" parent="." unique_id=139014464 instance=ExtResource("1_1jw75")]
+position = Vector2(829, 1993)
+spikes_height = 30.0
+
+[node name="Platform31" parent="." unique_id=1228515680 instance=ExtResource("3_cc5tm")]
+position = Vector2(954, 1959)
+script = null
+
+[node name="Spikes25" parent="." unique_id=291342539 instance=ExtResource("1_1jw75")]
+position = Vector2(1076, 1992)
+spikes_height = 30.0
+
+[node name="Platform32" parent="." unique_id=1587479880 instance=ExtResource("3_cc5tm")]
+position = Vector2(1201, 1965)
+script = null
+
+[node name="Spikes26" parent="." unique_id=1767636912 instance=ExtResource("1_1jw75")]
+position = Vector2(1319, 1989)
+spikes_height = 30.0
+
+[node name="Platform33" parent="." unique_id=924308501 instance=ExtResource("3_cc5tm")]
+position = Vector2(2484, 2021)
+script = null
+
+[node name="Platform34" parent="." unique_id=1247004092 instance=ExtResource("3_cc5tm")]
+position = Vector2(1448, 1958)
+script = null
+
+[node name="Monster17" parent="." unique_id=1447920922 instance=ExtResource("4_mj76i")]
+position = Vector2(296, 1927)
+
+[node name="Monster18" parent="." unique_id=1875333220 instance=ExtResource("4_mj76i")]
+position = Vector2(402, 1927)
+
+[node name="Monster19" parent="." unique_id=1066767521 instance=ExtResource("4_mj76i")]
+position = Vector2(539, 1944)
+
+[node name="Monster20" parent="." unique_id=1369093204 instance=ExtResource("4_mj76i")]
+position = Vector2(633, 1944)
+
+[node name="Monster21" parent="." unique_id=853909580 instance=ExtResource("4_mj76i")]
+position = Vector2(775, 1932)
+
+[node name="Monster22" parent="." unique_id=1297167428 instance=ExtResource("4_mj76i")]
+position = Vector2(858, 1918)
+
+[node name="Monster23" parent="." unique_id=1772558503 instance=ExtResource("4_mj76i")]
+position = Vector2(1044, 1924)
+
+[node name="Monster24" parent="." unique_id=1649700546 instance=ExtResource("4_mj76i")]
+position = Vector2(1109, 1915)
+
+[node name="Monster25" parent="." unique_id=1594366295 instance=ExtResource("4_mj76i")]
+position = Vector2(1266, 1904)
+
+[node name="Monster26" parent="." unique_id=1112330797 instance=ExtResource("4_mj76i")]
+position = Vector2(1357, 1907)
+
+[node name="Goal" parent="." unique_id=1420896212 instance=ExtResource("9_mdw0g")]
+position = Vector2(2865, 1929)
+
+[node name="Monster27" parent="." unique_id=1329173497 instance=ExtResource("4_mj76i")]
+position = Vector2(2011, 1902)
+monster_width = 200.0
+monster_height = 200.0
+
+[node name="Monster28" parent="." unique_id=605426022 instance=ExtResource("4_mj76i")]
+position = Vector2(1774, 1972)
+
+[node name="MovingPlatform10" parent="." unique_id=1375688922 instance=ExtResource("7_cc5tm")]
+position = Vector2(1891, 1907)
+platform_width = 30.0
+
+[node name="Monster29" parent="." unique_id=1847925644 instance=ExtResource("4_mj76i")]
+position = Vector2(1885, 1863)
+
+[node name="Monster30" parent="." unique_id=2143133761 instance=ExtResource("4_mj76i")]
+position = Vector2(2244, 1796)
+
+[node name="Monster31" parent="." unique_id=268570801 instance=ExtResource("4_mj76i")]
+position = Vector2(2247, 1703)
+
+[node name="DamageZone7" parent="." unique_id=383138732 instance=ExtResource("8_mj76i")]
+position = Vector2(2008, 1721)
+
+[node name="DamageZone8" parent="." unique_id=1624332137 instance=ExtResource("8_mj76i")]
+position = Vector2(1953, 1948)
+
+[node name="DamageZone9" parent="." unique_id=2098375757 instance=ExtResource("8_mj76i")]
+position = Vector2(1594, 1945)
+
+[node name="DamageZone10" parent="." unique_id=1766495876 instance=ExtResource("8_mj76i")]
+position = Vector2(1593, 1948)
+
+[node name="DamageZone11" parent="." unique_id=1533181482 instance=ExtResource("8_mj76i")]
+position = Vector2(1581, 1945)
+
+[node name="DamageZone12" parent="." unique_id=1222359977 instance=ExtResource("8_mj76i")]
+position = Vector2(1982, 1845)
+
+[node name="DamageZone13" parent="." unique_id=1457311607 instance=ExtResource("8_mj76i")]
+position = Vector2(2238, 1921)
+
+[node name="DamageZone14" parent="." unique_id=1473237592 instance=ExtResource("8_mj76i")]
+position = Vector2(2511, 1767)
+
+[node name="DamageZone15" parent="." unique_id=1908708572 instance=ExtResource("8_mj76i")]
+position = Vector2(2633, 1863)
+
+[node name="DamageZone16" parent="." unique_id=232291233 instance=ExtResource("8_mj76i")]
+position = Vector2(2820, 1796)
+
+[node name="Monster32" parent="." unique_id=851983920 instance=ExtResource("4_mj76i")]
+position = Vector2(2680, 1751)
+
+[node name="Monster33" parent="." unique_id=1361668214 instance=ExtResource("4_mj76i")]
+position = Vector2(2507, 1798)
+
+[node name="Spikes27" parent="." unique_id=1793087623 instance=ExtResource("6_cc5tm")]
+position = Vector2(221, 1905)
+spikes_width = 30.0
+spikes_height = 10.0
+spike_count = 1
+
+[node name="Spikes28" parent="." unique_id=830028843 instance=ExtResource("6_cc5tm")]
+position = Vector2(464, 1898)
+spikes_width = 30.0
+spikes_height = 10.0
+spike_count = 1
+
+[node name="Spikes29" parent="." unique_id=442972209 instance=ExtResource("6_cc5tm")]
+position = Vector2(2022, 1823)
+
+[node name="Spikes30" parent="." unique_id=154512837 instance=ExtResource("6_cc5tm")]
+position = Vector2(710, 1913)
+spikes_width = 30.0
+spikes_height = 10.0
+spike_count = 1
+
+[node name="Spikes31" parent="." unique_id=1936929943 instance=ExtResource("6_cc5tm")]
+position = Vector2(956, 1906)
+spikes_width = 30.0
+spikes_height = 10.0
+spike_count = 1
+
+[node name="Spikes32" parent="." unique_id=849135179 instance=ExtResource("6_cc5tm")]
+position = Vector2(1200, 1909)
+spikes_width = 30.0
+spikes_height = 10.0
+spike_count = 1
+
+[node name="Spikes33" parent="." unique_id=205725305 instance=ExtResource("6_cc5tm")]
+position = Vector2(1444, 1900)
+spikes_width = 30.0
+spikes_height = 10.0
+spike_count = 1
+
+[node name="Coin" parent="." unique_id=695698035 instance=ExtResource("10_naavy")]
+position = Vector2(2952, 823)
+
+[node name="Coin2" parent="." unique_id=1182655788 instance=ExtResource("10_naavy")]
+position = Vector2(476, 1824)
+
+[node name="Coin3" parent="." unique_id=1952812834 instance=ExtResource("10_naavy")]
+position = Vector2(2022, 1668)
+
+[node name="Coin4" parent="." unique_id=169904243 instance=ExtResource("10_naavy")]
+position = Vector2(1158, 1349)
+
+[node name="Coin5" parent="." unique_id=1056239347 instance=ExtResource("10_naavy")]
+position = Vector2(804, 732)
+
+[node name="Coin6" parent="." unique_id=1963122826 instance=ExtResource("10_naavy")]
+position = Vector2(2806, 131)
+
+[node name="HUD" parent="." unique_id=1129035430 instance=ExtResource("11_gh4cy")]
+layer = 10

@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cv0swh4dxw41o"]
+
+[ext_resource type="Script" uid="uid://bmxa7xhw5vbf7" path="res://levels/results_panel.gd" id="1_l4040"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1129035430]
+
+[node name="HeartsLabel" type="Label" parent="." unique_id=148769338 groups=["hearts_display"]]
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 200.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = " ♥ ♥ ♥"
+
+[node name="ResultsPanel" type="PanelContainer" parent="." unique_id=1762419787 groups=["results_panel"]]
+custom_minimum_size = Vector2(320, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -100.0
+offset_right = 160.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l4040")
+
+[node name="ResultsContent" type="VBoxContainer" parent="ResultsPanel" unique_id=668911174]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="TitleLabel" type="Label" parent="ResultsPanel/ResultsContent" unique_id=1102722150]
+layout_mode = 2
+text = "CILJ DOSEŽEN!"
+horizontal_alignment = 1
+
+[node name="ResultsGrid" type="GridContainer" parent="ResultsPanel/ResultsContent" unique_id=1321783034]
+layout_mode = 2
+columns = 2
+
+[node name="GoldName" type="Label" parent="ResultsPanel/ResultsContent/ResultsGrid" unique_id=2097595126]
+layout_mode = 2
+text = "Zlati kovanci"
+horizontal_alignment = 1
+
+[node name="GoldCount" type="Label" parent="ResultsPanel/ResultsContent/ResultsGrid" unique_id=179434894]
+layout_mode = 2
+text = "0"
+
+[node name="SilverName" type="Label" parent="ResultsPanel/ResultsContent/ResultsGrid" unique_id=2004862686]
+layout_mode = 2
+text = "Srebrni kovanci"
+horizontal_alignment = 1
+
+[node name="SilverCount" type="Label" parent="ResultsPanel/ResultsContent/ResultsGrid" unique_id=1791126420]
+layout_mode = 2
+text = "0"
+
+[node name="TotalName" type="Label" parent="ResultsPanel/ResultsContent/ResultsGrid" unique_id=1913412368]
+layout_mode = 2
+text = "Skupaj"
+horizontal_alignment = 1
+
+[node name="TotalCount" type="Label" parent="ResultsPanel/ResultsContent/ResultsGrid" unique_id=369693996]
+layout_mode = 2
+text = "0"

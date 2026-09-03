@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://j7enxhu0m2gu"]
+
+[ext_resource type="PackedScene" uid="uid://c2dnh37lbplc7" path="res://player.tscn" id="1_bufqw"]
+[ext_resource type="PackedScene" uid="uid://dg0rghrku1702" path="res://platform.tscn" id="2_0dsjn"]
+[ext_resource type="PackedScene" uid="uid://cxp0ekya43404" path="res://goal.tscn" id="3_ldkys"]
+[ext_resource type="PackedScene" uid="uid://cfgdgch51oww7" path="res://coin.tscn" id="4_dm5g0"]
+[ext_resource type="PackedScene" uid="uid://cv0swh4dxw41o" path="res://hud.tscn" id="5_vp6pq"]
+
+[node name="Level5" type="Node2D" unique_id=892526995]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1740844744]
+offset_right = 1068.0
+offset_bottom = 618.0
+
+[node name="player" parent="." unique_id=1901151934 instance=ExtResource("1_bufqw")]
+position = Vector2(168, 343)
+
+[node name="Platform" parent="." unique_id=2891599 instance=ExtResource("2_0dsjn")]
+position = Vector2(250, 407)
+script = null
+
+[node name="Goal" parent="." unique_id=1420896212 instance=ExtResource("3_ldkys")]
+position = Vector2(452, 378)
+
+[node name="Coin" parent="." unique_id=695698035 instance=ExtResource("4_dm5g0")]
+position = Vector2(290, 346)
+
+[node name="HUD" parent="." unique_id=1129035430 instance=ExtResource("5_vp6pq")]

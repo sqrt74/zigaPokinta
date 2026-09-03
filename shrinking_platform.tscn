@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://5hbnljcgr17f"]
+
+[ext_resource type="Script" path="res://shrinking_platform.gd" id="1_7ncxo"]
+
+[node name="ShrinkingPlatform" type="StaticBody2D"]
+script = ExtResource("1_7ncxo")
+minimum_width = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]

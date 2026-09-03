@@ -1,0 +1,198 @@
+[gd_scene format=3 uid="uid://ctenbi07i6sqv"]
+
+[ext_resource type="PackedScene" uid="uid://c2dnh37lbplc7" path="res://player.tscn" id="1_jx5dw"]
+[ext_resource type="PackedScene" uid="uid://bto5uhu1jy2nx" path="res://moving_platform.tscn" id="2_4s8bn"]
+[ext_resource type="PackedScene" uid="uid://cv0swh4dxw41o" path="res://hud.tscn" id="2_ukwr8"]
+[ext_resource type="PackedScene" uid="uid://cxp0ekya43404" path="res://goal.tscn" id="3_srmj5"]
+[ext_resource type="PackedScene" uid="uid://dg0rghrku1702" path="res://platform.tscn" id="4_dcpq1"]
+[ext_resource type="PackedScene" uid="uid://5hbnljcgr17f" path="res://shrinking_platform.tscn" id="5_w58q8"]
+[ext_resource type="PackedScene" uid="uid://cv051pt560kt5" path="res://spikes.tscn" id="6_550uy"]
+[ext_resource type="PackedScene" uid="uid://dbp3dmehudhiv" path="res://monster.tscn" id="7_pagjy"]
+[ext_resource type="PackedScene" uid="uid://cvluxvb0qn24v" path="res://damage_zone.tscn" id="8_d5x7l"]
+[ext_resource type="PackedScene" uid="uid://cfgdgch51oww7" path="res://coin.tscn" id="9_rtcij"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0euu"]
+size = Vector2(1152, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h42n4"]
+size = Vector2(30, 648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6dop"]
+size = Vector2(30, 648)
+
+[node name="Level" type="Node2D" unique_id=159753361]
+
+[node name="background" type="ColorRect" parent="." unique_id=734619415]
+offset_left = 3.0
+offset_top = -3.0
+offset_right = 3003.0
+offset_bottom = 997.0
+mouse_filter = 2
+color = Color(0, 0.192157, 0.537255, 1)
+
+[node name="floor" type="StaticBody2D" parent="." unique_id=256631406]
+position = Vector2(576, 615)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=1676935142]
+shape = SubResource("RectangleShape2D_k0euu")
+
+[node name="ColorRect" type="ColorRect" parent="floor" unique_id=183638413]
+offset_left = -576.0
+offset_top = -33.0
+offset_right = 576.0
+offset_bottom = 33.0
+mouse_filter = 2
+color = Color(0.360784, 0.0901961, 0, 1)
+
+[node name="Platform" parent="floor" unique_id=1510849223 instance=ExtResource("4_dcpq1")]
+position = Vector2(419, 369)
+script = null
+
+[node name="L_stena" type="StaticBody2D" parent="." unique_id=1182865657]
+position = Vector2(15, 324)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="L_stena" unique_id=1257192042]
+shape = SubResource("RectangleShape2D_h42n4")
+
+[node name="ColorRect" type="ColorRect" parent="L_stena" unique_id=2070294538]
+offset_left = -15.0
+offset_top = -324.0
+offset_right = 15.0
+offset_bottom = 324.0
+mouse_filter = 2
+color = Color(0.360784, 0.0901961, 0, 1)
+
+[node name="D_stena" type="StaticBody2D" parent="." unique_id=1488284171]
+position = Vector2(1137, 324)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="D_stena" unique_id=1085850930]
+shape = SubResource("RectangleShape2D_w6dop")
+
+[node name="ColorRect" type="ColorRect" parent="D_stena" unique_id=542127587]
+offset_left = -15.0
+offset_top = -324.0
+offset_right = 15.0
+offset_bottom = 324.0
+mouse_filter = 2
+color = Color(0.360784, 0.0901961, 0, 1)
+
+[node name="HUD" parent="." unique_id=1129035430 instance=ExtResource("2_ukwr8")]
+
+[node name="player" parent="." unique_id=267479132 instance=ExtResource("1_jx5dw")]
+position = Vector2(109, 522)
+
+[node name="MovingPlatform2" parent="." unique_id=1292827292 instance=ExtResource("2_4s8bn")]
+position = Vector2(416, 254)
+platform_width = 30.0
+travel_time = 1.0
+
+[node name="Goal" parent="." unique_id=1764117586 instance=ExtResource("3_srmj5")]
+position = Vector2(140, 277)
+
+[node name="Platform2" parent="." unique_id=1266322243 instance=ExtResource("4_dcpq1")]
+position = Vector2(1002, 477)
+rotation = 1.5708
+script = null
+
+[node name="ShrinkingPlatform" parent="." unique_id=637757096 instance=ExtResource("5_w58q8")]
+position = Vector2(306, 219)
+rotation = 1.5708
+platform_width = 200.0
+shrink_speed = 200.0
+restore_speed = 10.0
+restore_delay = 9.6
+
+[node name="ShrinkingPlatform2" parent="." unique_id=1437289873 instance=ExtResource("5_w58q8")]
+position = Vector2(725, 374)
+shrink_speed = 200.0
+restore_speed = 100.0
+
+[node name="Spikes2" parent="." unique_id=129807124 instance=ExtResource("6_550uy")]
+position = Vector2(350, 382)
+spike_count = 15
+
+[node name="Platform" parent="." unique_id=390284823 instance=ExtResource("4_dcpq1")]
+position = Vector2(175, 411)
+script = null
+
+[node name="Platform3" parent="." unique_id=79597387 instance=ExtResource("4_dcpq1")]
+position = Vector2(252, 8)
+rotation = 1.5708
+script = null
+
+[node name="Platform4" parent="." unique_id=160216638 instance=ExtResource("4_dcpq1")]
+position = Vector2(257, 333)
+rotation = 1.5708
+script = null
+
+[node name="Monster" parent="." unique_id=1289291777 instance=ExtResource("7_pagjy")]
+position = Vector2(304, 468)
+
+[node name="Monster2" parent="." unique_id=626055429 instance=ExtResource("7_pagjy")]
+position = Vector2(742, 64)
+
+[node name="Monster3" parent="." unique_id=431341549 instance=ExtResource("7_pagjy")]
+position = Vector2(661, 236)
+
+[node name="Monster4" parent="." unique_id=744485652 instance=ExtResource("7_pagjy")]
+position = Vector2(667, 67)
+
+[node name="Monster5" parent="." unique_id=297034651 instance=ExtResource("7_pagjy")]
+position = Vector2(584, 513)
+
+[node name="Monster6" parent="." unique_id=1783886731 instance=ExtResource("7_pagjy")]
+position = Vector2(570, 414)
+
+[node name="Monster7" parent="." unique_id=107725806 instance=ExtResource("7_pagjy")]
+position = Vector2(517, 207)
+
+[node name="Monster8" parent="." unique_id=1997401792 instance=ExtResource("7_pagjy")]
+position = Vector2(462, 466)
+
+[node name="Monster9" parent="." unique_id=1994758812 instance=ExtResource("7_pagjy")]
+position = Vector2(194, 359)
+
+[node name="DamageZone" parent="." unique_id=638003928 instance=ExtResource("8_d5x7l")]
+position = Vector2(623, 479)
+zone_size = Vector2(600, 200)
+
+[node name="Monster10" parent="." unique_id=1946013387 instance=ExtResource("7_pagjy")]
+position = Vector2(513, 112)
+
+[node name="Monster11" parent="." unique_id=636006216 instance=ExtResource("7_pagjy")]
+position = Vector2(448, 371)
+
+[node name="Coin" parent="." unique_id=695698035 instance=ExtResource("9_rtcij")]
+position = Vector2(803, 290)
+
+[node name="Coin2" parent="." unique_id=209884133 instance=ExtResource("9_rtcij")]
+position = Vector2(888, 283)
+coin_type = 1
+
+[node name="Coin3" parent="." unique_id=1664334684 instance=ExtResource("9_rtcij")]
+position = Vector2(1060, 403)
+
+[node name="Coin4" parent="." unique_id=916688218 instance=ExtResource("9_rtcij")]
+position = Vector2(1003, 289)
+coin_type = 1
+
+[node name="Coin5" parent="." unique_id=244509265 instance=ExtResource("9_rtcij")]
+position = Vector2(741, 240)
+
+[node name="Coin6" parent="." unique_id=1449889555 instance=ExtResource("9_rtcij")]
+position = Vector2(690, 428)
+
+[node name="Coin7" parent="." unique_id=1494322409 instance=ExtResource("9_rtcij")]
+position = Vector2(128, 134)
+coin_type = 1
+
+[node name="Coin8" parent="." unique_id=708666500 instance=ExtResource("9_rtcij")]
+position = Vector2(1020, 184)
+
+[node name="Coin9" parent="." unique_id=746720190 instance=ExtResource("9_rtcij")]
+position = Vector2(321, 27)
+coin_type = 1
+
+[node name="Coin10" parent="." unique_id=1978539194 instance=ExtResource("9_rtcij")]
+position = Vector2(488, 531)
+coin_type = 1
