@@ -29,10 +29,6 @@ extends Node2D
 
 @export_range(0.0, 5.0, 0.1) var restart_delay: float = 0.5
 
-
-var player_dead: bool = false
-
-
 func _ready() -> void:
 	_update_spikes()
 
@@ -105,8 +101,6 @@ func _update_spikes() -> void:
 	collision.position = Vector2.ZERO
 	
 func _on_body_entered(body: Node2D) -> void:
-	if player_dead:
-		return
 
 	if not body.is_in_group("player"):
 		return
@@ -131,10 +125,5 @@ func _on_body_entered(body: Node2D) -> void:
 	_kill_player(player)
 
 func _kill_player(player: CharacterBody2D) -> void:
-	if player_dead:
-		return
-
-	player_dead = true
-
 	if player.has_method("die_instantly"):
 		player.die_instantly()

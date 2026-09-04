@@ -44,8 +44,6 @@ var gravity: float = ProjectSettings.get_setting(
 var direction: float = 1.0
 var start_x: float
 var monster_dead: bool = false
-var player_dead: bool = false
-
 
 func _ready() -> void:
 	_update_monster()
@@ -126,7 +124,7 @@ func _change_direction() -> void:
 	velocity.x = direction * movement_speed
 
 func _on_stomp_area_entered(body: Node2D) -> void:
-	if monster_dead or player_dead:
+	if monster_dead:
 		return
 
 	# Pošast ne sme zaznati same sebe.
@@ -145,7 +143,7 @@ func _on_stomp_area_entered(body: Node2D) -> void:
 		_kill_monster(player)
 		
 func _on_danger_area_entered(body: Node2D) -> void:
-	if monster_dead or player_dead:
+	if monster_dead :
 		return
 
 	if body == self:
@@ -165,7 +163,7 @@ func _on_danger_area_entered(body: Node2D) -> void:
 func _resolve_danger_touch(
 	player: CharacterBody2D
 ) -> void:
-	if monster_dead or player_dead:
+	if monster_dead :
 		return
 
 	if not is_instance_valid(player):
@@ -249,18 +247,15 @@ func _kill_monster(
 	queue_free()
 	
 func _kill_player(player: CharacterBody2D) -> void:
-	if player_dead or monster_dead:
+	if monster_dead:
 		return
 
 	if not is_instance_valid(player):
 		return
 
-	player_dead = true
-	velocity = Vector2.ZERO
-
 	if player.has_method("die_instantly"):
 		player.die_instantly()
-
+		
 func _update_monster() -> void:
 	var body_collision := get_node_or_null(
 		"CollisionShape2D"
