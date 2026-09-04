@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cxp0ekya43404" path="res://goal.tscn" id="3_ldkys"]
 [ext_resource type="PackedScene" uid="uid://cfgdgch51oww7" path="res://coin.tscn" id="4_dm5g0"]
 [ext_resource type="PackedScene" uid="uid://cv0swh4dxw41o" path="res://hud.tscn" id="5_vp6pq"]
+[ext_resource type="PackedScene" uid="uid://cvluxvb0qn24v" path="res://damage_zone.tscn" id="6_0dsjn"]
+[ext_resource type="PackedScene" uid="uid://dbp3dmehudhiv" path="res://monster.tscn" id="7_ldkys"]
 
 [node name="Level5" type="Node2D" unique_id=892526995]
 
@@ -13,16 +15,26 @@ offset_right = 1068.0
 offset_bottom = 618.0
 
 [node name="player" parent="." unique_id=1901151934 instance=ExtResource("1_bufqw")]
-position = Vector2(168, 343)
-
-[node name="Platform" parent="." unique_id=2891599 instance=ExtResource("2_0dsjn")]
-position = Vector2(250, 407)
-script = null
+position = Vector2(213, 225)
 
 [node name="Goal" parent="." unique_id=1420896212 instance=ExtResource("3_ldkys")]
-position = Vector2(452, 378)
+position = Vector2(664, 387)
 
 [node name="Coin" parent="." unique_id=695698035 instance=ExtResource("4_dm5g0")]
 position = Vector2(290, 346)
 
 [node name="HUD" parent="." unique_id=1129035430 instance=ExtResource("5_vp6pq")]
+
+[node name="Platform2" parent="." unique_id=1701313166 instance=ExtResource("2_0dsjn")]
+position = Vector2(337, 426)
+platform_width = 500.0
+
+[node name="Coin2" parent="." unique_id=1503707744 instance=ExtResource("4_dm5g0")]
+position = Vector2(128, 266)
+coin_type = 1
+
+[node name="DamageZone" parent="." unique_id=638003928 instance=ExtResource("6_0dsjn")]
+position = Vector2(449, 356)
+
+[node name="Monster" parent="." unique_id=744485652 instance=ExtResource("7_ldkys")]
+position = Vector2(479, 373)

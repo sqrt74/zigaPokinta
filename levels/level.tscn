@@ -44,10 +44,6 @@ offset_bottom = 33.0
 mouse_filter = 2
 color = Color(0.360784, 0.0901961, 0, 1)
 
-[node name="Platform" parent="floor" unique_id=1510849223 instance=ExtResource("4_dcpq1")]
-position = Vector2(419, 369)
-script = null
-
 [node name="L_stena" type="StaticBody2D" parent="." unique_id=1182865657]
 position = Vector2(15, 324)
 
@@ -155,6 +151,7 @@ position = Vector2(194, 359)
 [node name="DamageZone" parent="." unique_id=638003928 instance=ExtResource("8_d5x7l")]
 position = Vector2(623, 479)
 zone_size = Vector2(600, 200)
+damage_interval = 3.0
 
 [node name="Monster10" parent="." unique_id=1946013387 instance=ExtResource("7_pagjy")]
 position = Vector2(513, 112)

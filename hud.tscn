@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cv0swh4dxw41o"]
 
-[ext_resource type="Script" uid="uid://bmxa7xhw5vbf7" path="res://levels/results_panel.gd" id="1_l4040"]
+[ext_resource type="Script" uid="uid://bmxa7xhw5vbf7" path="res://results_panel.gd" id="1_l4040"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1129035430]
 
